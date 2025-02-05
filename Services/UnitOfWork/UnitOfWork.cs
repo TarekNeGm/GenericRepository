@@ -11,8 +11,8 @@ namespace Services.UnitOfWork
 {
     public class UnitOfWork(AppDbContext context) : IUnitOfWork
     {
-        private readonly AppDbContext _context;
-        private Hashtable _repositories;
+        private readonly AppDbContext _context = context;
+        private Hashtable? _repositories;
 
         public async Task<int> Complete() => await _context.SaveChangesAsync();
         public void Dispose() => _context.Dispose();
