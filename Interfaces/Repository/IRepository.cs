@@ -21,7 +21,7 @@ namespace Interfaces.Repository
         void DeleteRange(IEnumerable<TEntity> entities);
         void Activate(TEntity Obj);
         void Deactivate(TEntity Obj);
-        IQueryable<TEntity> Query(bool applySignature = true, string signature = null);
+        IQueryable<TEntity> Query();
     }
 
 }
