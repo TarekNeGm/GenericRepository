@@ -3,7 +3,7 @@ using Interfaces.Repository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Services
+namespace Services.Repository
 {
     public class RepositoryService<TEntity, L> : IRepository<TEntity, L> where TEntity : class where L : struct
     {
